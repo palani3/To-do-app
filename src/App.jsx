@@ -18,6 +18,14 @@ function App() {
       })
     });
   }
+  const deleteNoteall=()=>{
+    // setNotes(preNotes=>{
+    //   return preNotes.filter((nodeitem, index)=>{
+    //     return id;
+    //   })
+    // });
+    console.log("hello")
+  }
    const addNote=(newNote)=>{
     setNotes(preNotes=>{
       return [...preNotes,newNote]

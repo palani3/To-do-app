@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Note from "./Note";
 
-export default function Home({onAddNote}) {
+export default function Home({onAddNote,deleteNoteall }) {
   const [note ,setNote] =useState({
     title:'',
     content:'',
@@ -21,6 +21,10 @@ export default function Home({onAddNote}) {
       
     });
   }
+function deletealldata(){
+  deleteNoteall();
+
+}
   function SubmitNote(event){
     console.log("onsubmit");
    onAddNote(note);
@@ -68,7 +72,7 @@ export default function Home({onAddNote}) {
 
                     <label htmlFor="floatingTextarea">Comments</label>
                   </div>
-                  <button type="button" className="btn btn-danger text-end px-5 mt-5 mx-5">Clear</button>
+                  <button type="button" className="btn btn-danger text-end px-5 mt-5 mx-5"  onClick={deletealldata}>Clear</button>
                   <button type="button" className="btn btn-primary text-end px-5 mt-5 mx-5"
                    onClick={SubmitNote}>Add</button>
               
