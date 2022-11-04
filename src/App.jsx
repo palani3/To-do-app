@@ -18,12 +18,12 @@ function App() {
       })
     });
   }
-  const deleteNoteall=()=>{
-    // setNotes(preNotes=>{
-    //   return preNotes.filter((nodeitem, index)=>{
-    //     return id;
-    //   })
-    // });
+  const deleteNoteall=(id)=>{
+    setNotes(preNotes=>{
+      return preNotes.filter((nodeitem, index)=>{
+        return id;
+      })
+    });
     console.log("hello")
   }
    const addNote=(newNote)=>{
@@ -41,7 +41,7 @@ console.log("hi palani",Notes)
  
     
     <Routes>
-      <Route path="/" element={ <Home onAddNote={addNote}/> } />
+      <Route path="/" element={ <Home onAddNote={addNote} deleteNoteall={deleteNoteall}/> } />
       <Route path="footer" element={ <Footer/> } />
       {/* <Route path="Note" element={ <Note items={Notes}/> } /> */}
     </Routes>

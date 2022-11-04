@@ -21,7 +21,7 @@ export default function Home({onAddNote,deleteNoteall }) {
       
     });
   }
-function deletealldata(){
+function deletealldata(event){
   deleteNoteall();
 
 }
