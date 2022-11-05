@@ -51,7 +51,8 @@ function deletealldata(event){
                 placeholder=""
                 onChange={handleChange}
                 value={note.title}
-                name="title"
+                name="title" 
+                required
               />
               <label htmlFor="floatingInputValue">Heading</label>
               </div>
@@ -64,6 +65,8 @@ function deletealldata(event){
                     name="content"
                       className="form-control"
                       placeholder=""
+                      required
+                      
                       id="floatingTextarea"
                       value={note.content}
                       onChange={handleChange}
@@ -71,6 +74,9 @@ function deletealldata(event){
                     
 
                     <label htmlFor="floatingTextarea">Comments</label>
+                    <div className="invalid-feedback">
+      Please provide a valid city.
+    </div>
                   </div>
                   <button type="button" className="btn btn-danger text-end px-5 mt-5 mx-5"  onClick={deletealldata}>Clear</button>
                   <button type="button" className="btn btn-primary text-end px-5 mt-5 mx-5"
