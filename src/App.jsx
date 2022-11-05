@@ -46,7 +46,7 @@ console.log("hi palani",Notes)
       <Route path="footer" element={ <Footer/> } />
       {/* <Route path="Note" element={ <Note items={Notes}/> } /> */}
     </Routes>
-    <Login></Login>
+
     {Notes.map((items,index)=>{
         return (
           <Note key={index}
