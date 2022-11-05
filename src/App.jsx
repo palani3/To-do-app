@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom"
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Note from './Components/Note';
+import Login from './Components/Login';
 
 function App() {
   const [Notes, setNotes] = useState([]);
@@ -45,6 +46,7 @@ console.log("hi palani",Notes)
       <Route path="footer" element={ <Footer/> } />
       {/* <Route path="Note" element={ <Note items={Notes}/> } /> */}
     </Routes>
+    <Login></Login>
     {Notes.map((items,index)=>{
         return (
           <Note key={index}
@@ -57,16 +59,7 @@ console.log("hi palani",Notes)
       })
 
       }
-    {/* <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button> */}
 
 <Footer/>
   </div>
